@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+:root {
+    --white: #ffffff;
+    --black: #000000;
+    --darkblue: #2A324B;
+    --mediumblue: #58699D;
+    --lightblue: #E1E5EE;
+
+    --font: "Roboto", "Sans-serif";
+    --rootsize: 20px;
+    --maxwith: 1500px;
+}
+
+/* Background and metaproperties*/
+body {
+    background-color: var(--lightblue);
+    font-family: var(--font);
+    font-size: var(--rootsize);
+    
+}
+
+
+/* Text properties*/
+p { font-size: 1.4rem; margin: 1rem; color: var(--black)}
+h2 { font-size: 2rem; font-weight: 700; margin: 1rem; color: var(--darkblue)}
+h3 { font-size: 1.5rem; font-weight: 600; color: var(--darkblue)}
+a { color: var(--mediumblue)}
+nav button { font-size: 1.5rem; font-weight: 700;}
+
+/* Main structure */
+#container {
+    width: 100%;
+    max-width: var(--maxwith);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+}
+
+/* Nav */
+nav ul {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 0; 
+}
+
+nav ul li {
+    display: flex;
+    flex-grow: 1;
+}
+
+nav button {
+    background-color: var(--darkblue);
+    text-align: center;
+    flex-basis: auto;
+    flex-grow: 1;
+    padding: 1rem;
+    color: var(--white);
+    text-decoration: none;
+    cursor: pointer;
+    border-style: none;
+
+}
+
+nav button:hover {
+    color: var(--darkblue);
+    background-color: var(--white);
+}
+
+.active {
+    color: var(--darkblue);
+    background-color: var(--white);
+}
+
+/* main */
+main {
+    background-color: var(--white);
+    padding: 4rem;
+}
+
+main ul{
+    margin-left: 2rem;
+}
+
+@media only screen and (min-width: 1012px) {
+    nav ul {
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin: 0; 
+    }
+
+    nav button {
+        flex-grow: 1;
+        padding: 2rem 2rem;
+    }
+}

@@ -1,13 +1,28 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="CSS/style.css" rel="stylesheet" media="all">
+    <title>UIN24AK Resource Layout Berg</title>
+</head>
+<body>
+    <div id="container">
+        <header>
+            <nav>
+                <ul>
+                    <li><button id="html" onclick = "updateHTML(0)">HTML</button></li>
+                    <li><button id="css" onclick = "updateHTML(1)">CSS</button></li>
+                    <li><button id="javascript" onclick = "updateHTML(2)">JavaScript</button></li>
+                    <li><button id="react" onclick = "updateHTML(3)">React</button></li>
+                    <li><button id="sanity" onclick = "updateHTML(4)">Sanity and headless CMS</button></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+        </main>
+    </div>
+    <script src="javascript/ressurser.js"></script>
+    <script src="javascript/sitescript.js"></script>
+</body>
 </html>
