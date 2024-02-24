@@ -1,18 +1,21 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
+
 export default function Resources({resources}) {
   const { slug } = useParams();
   const [resource, setResource] = useState();
 
   useEffect(() => {
-    console.log(resources)
+    //console.log(resources)
+    console.log("Current slug:", slug);
     if (resources) {
       const filteredResource = resources.filter(res => res.category.toLowerCase() === slug.toLowerCase());
       setResource(filteredResource[0]); // Set to empty object if not found
     }
-  }, [resources]); // [resources] sier at useEffect skal kjøre på nytt hvis denne forandres (f.eks at innholdet oppdateres)
+  }, [slug, resources]); // [resources] sier at useEffect skal kjøre på nytt hvis denne forandres (f.eks at innholdet oppdateres)
   console.log(resource)
+  
   return (
     <section>
           <h2>{resource?.category}</h2>
