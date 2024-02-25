@@ -10,7 +10,7 @@ export default function Resources({resources}) {
     //console.log(resources)
     console.log("Current slug:", slug);
     if (resources) {
-      const filteredResource = resources.filter(res => res.category.toLowerCase() === slug.toLowerCase());
+      const filteredResource = resources.filter(res => res.category.toLowerCase() === slug.toLowerCase().replaceAll("-", " "));
       setResource(filteredResource[0]); // Set to empty object if not found
     }
   }, [slug, resources]); // [resources] sier at useEffect skal kjøre på nytt hvis denne forandres (f.eks at innholdet oppdateres)
