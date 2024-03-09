@@ -47,6 +47,11 @@ nav button {
 }
 
 /* Main structure */
+#root {
+    width: 100vw;
+    height: 100vh;
+}
+
 #container {
     width: 100%;
     max-width: $maxWidth;
