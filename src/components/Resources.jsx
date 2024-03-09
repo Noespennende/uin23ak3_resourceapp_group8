@@ -2,18 +2,18 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 
-export default function Resources({resources}) {
+export default function Resources({resources, category}) {
   const { slug } = useParams();
   const [resource, setResource] = useState();
 
   useEffect(() => {
-    //console.log(resources)
+    console.log(resources)
     console.log("Current slug:", slug);
-    if (resources) {
-      const filteredResource = resources.filter(res => res.category.toLowerCase() === slug.toLowerCase().replaceAll("-", " "));
-      setResource(filteredResource[0]); // Set to empty object if not found
+    if (resources && category) {
+      const filteredResource = resources.find(res => res.category.toLowerCase().includes(category.toLowerCase()));
+      setResource(filteredResource || {});
     }
-  }, [slug, resources]); // [resources] sier at useEffect skal kjøre på nytt hvis denne forandres (f.eks at innholdet oppdateres)
+  }, [resources, category]); // [resources] sier at useEffect skal kjøre på nytt hvis denne forandres (f.eks at innholdet oppdateres)
   console.log(resource)
   
   return (
