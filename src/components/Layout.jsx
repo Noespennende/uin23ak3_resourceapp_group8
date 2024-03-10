@@ -1,9 +1,9 @@
-import Nav from "./Nav"
+import Nav from "./nav"
 
-export default function Layout({children}){
-    return(
+export default function Layout({ children }) {
+    return (
         <div id="container">
-            <Nav/>
+            <Nav />
             <main>
                 {children}
             </main>

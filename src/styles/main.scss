@@ -6,7 +6,7 @@ $colorDarkblue: #2A324B;
 $colorMediumblue: #58699D;
 $colorLightblue: #E1E5EE;
 
-$font: "Roboto", "Sans-serif";
+$font: 'Roboto', Sans-serif;
 $fontSize: 20px;
 $maxWidth: 1500px;
 
@@ -37,8 +37,20 @@ h3 {
     color: $colorDarkblue;
 }
 
-a {
+main a {
     color: $colorMediumblue
+}
+
+nav button a {
+    color: $colorWhite;
+}
+
+nav button.active a {
+    color: $colorDarkblue;
+}
+
+nav button:hover a {
+    color: $colorDarkblue;
 }
 
 nav button {
@@ -85,7 +97,7 @@ nav button {
     text-decoration: none;
     cursor: pointer;
     border-style: none;
-
+    border-radius: 8px 8px 0px 0px;
 }
 
 nav button:hover {
@@ -93,7 +105,7 @@ nav button:hover {
     background-color: $colorWhite;
 }
 
-.active {
+nav button.active {
     color: $colorDarkblue;
     background-color: $colorWhite;
 }
