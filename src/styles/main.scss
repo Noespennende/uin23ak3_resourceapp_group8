@@ -38,24 +38,21 @@ h3 {
 }
 
 main a {
-    color: $colorMediumblue
+    color: $colorMediumblue;
 }
 
-nav button a {
+nav ul a {
     color: $colorWhite;
-}
-
-nav button.active a {
-    color: $colorDarkblue;
-}
-
-nav button:hover a {
-    color: $colorDarkblue;
-}
-
-nav button {
     font-size: 1.5rem;
     font-weight: 700;
+}
+
+nav ul.active a {
+    color: $colorDarkblue;
+}
+
+nav ul:hover {
+    color: $colorDarkblue;
 }
 
 /* Main structure */
@@ -82,17 +79,12 @@ nav ul {
     margin: 0;
 }
 
-nav ul li {
+nav ul a {
     display: flex;
-    flex-grow: 1;
-}
-
-nav button {
     background-color: $colorDarkblue;
     text-align: center;
     flex-basis: auto;
     flex-grow: 1;
-    padding: 1rem;
     color: $colorWhite;
     text-decoration: none;
     cursor: pointer;
@@ -100,12 +92,12 @@ nav button {
     border-radius: 8px 8px 0px 0px;
 }
 
-nav button:hover {
+nav ul a:hover {
     color: $colorDarkblue;
     background-color: $colorWhite;
 }
 
-nav button.active {
+nav ul a.active {
     color: $colorDarkblue;
     background-color: $colorWhite;
 }
@@ -129,7 +121,7 @@ main ul {
         margin: 0;
     }
 
-    nav button {
+    nav ul li {
         flex-grow: 1;
         padding: 2rem 2rem;
     }
